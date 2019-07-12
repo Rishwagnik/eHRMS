@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:focusableInTouchMode="true"
+    android:focusable="true" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        <LinearLayout
+            android:id="@id/formContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/leaveBalanceButton"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:gravity="center"
+                android:text="Leave Balance"
+                android:textColor="@color/colorWhiteText" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/leaveTableView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="10dp"
+                app:cardCornerRadius="10dp"
+                android:layout_margin="5dp"
+                android:visibility="gone" >
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorTableBackground" >
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorWhiteText"
+                            android:textSize="20sp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:textStyle="bold"
+                            android:text="Balance"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorWhiteText"
+                            android:textSize="20sp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:textStyle="bold"
+                            android:text="Pending"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorWhiteText"
+                            android:textSize="20sp"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:text="Available"/>
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                         >
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/balanceTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="-"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/pendingTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="-"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/availableTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="-"/>
+
+                    </TableRow>
+
+                </TableLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/formContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/cardBackground"
+                app:cardCornerRadius="10dp"
+                app:contentPadding="5dp"
+                android:elevation="50dp"
+                android:layout_margin="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content">
+
+                       <com.google.android.material.textfield.TextInputLayout
+                           android:id="@+id/leaveReasonContainer"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_margin="5dp"
+                           android:layout_weight="1" >
+
+                           <com.google.android.material.textfield.TextInputEditText
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:id="@+id/leaveReasonText"
+                               android:singleLine="true"
+                               android:textSize="20sp"
+                               android:hint="Reason of Leave"
+                               android:imeOptions="actionDone" />
+
+                       </com.google.android.material.textfield.TextInputLayout>
+
+                       <RelativeLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:id="@+id/leaveTypeContainer"
+                           android:layout_weight="1.5" >
+
+                           <Spinner
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:id="@+id/leaveTypeSpinner"
+                               android:layout_alignBottom="@id/leaveTypeTextContainer" />
+
+                           <com.google.android.material.textfield.TextInputLayout
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:id="@+id/leaveTypeTextContainer"
+                               android:layout_margin="5dp"
+                               android:focusable="true"
+                               android:focusableInTouchMode="true" >
+
+                               <com.google.android.material.textfield.TextInputEditText
+                                   android:layout_width="match_parent"
+                                   android:layout_height="match_parent"
+                                   android:editable="false"
+                                   android:id="@+id/leaveTypeText"
+                                   android:singleLine="true"
+                                   android:textSize="20sp"
+                                   android:hint="Leave Type"/>
+
+                           </com.google.android.material.textfield.TextInputLayout>
+
+                       </RelativeLayout>
+
+                   </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:layout_weight="1.5" >
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/contactText"
+                                android:singleLine="true"
+                                android:inputType="phone"
+                                android:textSize="20sp"
+                                android:hint="Contact"
+                                android:imeOptions="actionDone" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:layout_margin="5dp"
+                            android:layout_weight="1" >
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/addressText"
+                                android:textSize="20sp"
+                                android:inputType="textLongMessage"
+                                android:hint="Contact Address"
+                                android:imeOptions="actionDone" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:layout_weight="1" >
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/startDateText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:editable="false"
+                                android:singleLine="true"
+                                android:textSize="20sp"
+                                android:hint="Start Date"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:layout_weight="1" >
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/endDateText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:editable="false"
+                                android:singleLine="true"
+                                android:textSize="20sp"
+                                android:hint="End Date"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/holidayTypeContainer"
+                            android:layout_weight="1" >
+
+                            <Spinner
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/holidayTypeSpinner"
+                                android:layout_alignBottom="@id/holidayTypeTextContainer" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/holidayTypeTextContainer"
+                                android:layout_margin="5dp"
+                                android:focusable="true"
+                                android:focusableInTouchMode="true" >
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/holidayTypeText"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:editable="false"
+                                    android:hint="Holiday Type"
+                                    android:singleLine="true"
+                                    android:textSize="20sp" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_gravity="center">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="20sp"
+                                android:layout_margin="5dp"
+                                android:layout_gravity="center"
+
+                                android:text="Availing LTC"/>
+
+                        <com.google.android.material.checkbox.MaterialCheckBox
+                            android:id="@+id/availLTC"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:layout_gravity="center"/>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                </LinearLayout>
+
+                    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                        android:id="@+id/submitButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:gravity="center"
+                        android:text="Submit"
+                        android:textColor="@color/colorWhiteText" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/calendarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:visibility="gone" >
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:foregroundGravity="center">
+
+                <CalendarView
+                    android:id="@+id/calendarView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="@color/colorPrimary" />
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

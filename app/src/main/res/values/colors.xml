@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#66BB6A</color>
+    <color name="colorPrimaryDark">#2E7D32</color>
+    <color name="colorAccent">#00C853</color>
+    <color name="colorWhiteText">#FFFFFF</color>
+    <color name="colorTableBackground">#C8E6C9</color>
+    <color name="cardBackground">#EEEEEE</color>
+    <color name="formFields">#BDBDBD</color>
+    <color name="rejectButtonColor">#C62828</color>
+</resources>

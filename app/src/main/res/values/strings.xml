@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">e HRMS</string>
+    <string-array name="leave_types">
+        <item>Casual Leave</item>
+        <item>Restricted Holiday</item>
+        <item>Earned Leave</item>
+        <item>Special Leave Without Pay</item>
+        <item>Special Casual Leave</item>
+        <item>Paternity Leave</item>
+        <item>Half Paid Leave</item>
+        <item>Study Leave</item>
+        <item>Contract Leave</item>
+        <item>Child Care Leave</item>
+        <item>Hospital Leave</item>
+        <item>Special Disability Leave</item>
+        <item>Child Adoption Leave</item>
+        <item>Maternity Leave</item>
+        <item></item>
+    </string-array>
+
+    <string-array name="nav_drawer_labels">
+        <item>Leave Application</item>
+        <item>Leave History</item>
+        <item>Leave Approval</item>
+    </string-array>
+
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+    <string name="title_leave_application">Leave Application</string>
+    <string name="title_leave_history">Leave History</string>
+    <string name="title_leave_approval">Leave Approval</string>
+    <string name="title_approve_button">Approve</string>
+    <string name="title_reject_button">Reject</string>
+
+    <string name="leave_application_url">http://196.1.113.93/hrmsAndroid/addNewLeaveAndroid.html</string>
+    <string name="leave_approval_url">http://196.1.113.93/hrmsAndroid/leaveApprovedRejectedListAndroid.html</string>
+    <string name="approval_response_url">http://196.1.113.93/hrmsAndroid/approveLeaveApplicationAndroid.html</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
